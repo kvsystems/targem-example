@@ -1,0 +1,17 @@
+{
+  "name": "kvsystems/targem-parser",
+  "description": "Test example from Targem LTD",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Aleksandr Kalugin",
+      "email": "ak777-07@mail.ru"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Targem\\Parser\\": "src/"
+    }
+  }
+}
