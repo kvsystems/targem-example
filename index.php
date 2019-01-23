@@ -22,12 +22,3 @@ try {
 } catch (\RuntimeException $e) {
     echo $e->getMessage() . PHP_EOL;
 }
-
-/** Trying to execution of the main script */
-/**try {
-    System\Core::initialize();
-} catch (\Exception $e) {
-    Debug::catchMessage($e->getMessage());
-} finally {
-    System\Core::handle();
-}*/
