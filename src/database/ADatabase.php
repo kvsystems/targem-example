@@ -45,11 +45,9 @@ abstract class ADatabase {
 
     /**
      * Sets new csv row.
-     * @param $row array
-     * @return bool
+     * @param $data array
      */
-    public function data(array $row) : bool {
-
-        return true;
+    public function data(array $data = []) {
+        $this->data = $data;
     }
 }

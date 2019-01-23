@@ -22,7 +22,7 @@ class MysqlDatabase extends ADatabase {
      * @param string $db
      */
     public function __construct(string $host, string $user, string $pwd, string $db)   {
-        try{
+        /**try{
             if( $this->connection = mysqli_connect($host, $user, $pwd) ) {
                 mysqli_select_db($this->connection, $db);
                 $this->connection->query("SET lc_time_names = 'ru_RU'");
@@ -30,7 +30,7 @@ class MysqlDatabase extends ADatabase {
             } else throw new \Exception('Could not connect');
         } catch (\Exception $e) {
             echo $e->getMessage() . PHP_EOL;
-        }
+        }*/
     }
 
     /**
@@ -56,7 +56,7 @@ class MysqlDatabase extends ADatabase {
                 if($i < count($this->columns) - 1) $query .= ',';
             }
         }
-        $query .= 'PRIMARY KEY (uniqueId))';
+        $query .= ', PRIMARY KEY (uniqueId))';
         return $this->connection->query($query) === true
             ? true : false;
     }
@@ -70,11 +70,12 @@ class MysqlDatabase extends ADatabase {
         $query = 'INSERT INTO ' . $table . ' VALUES';
         if(!empty($this->data)) {
             for($i = 0; $i < count($this->data); $i++)   {
-                $query .= '(';
-                foreach($this->data[$i] as $cell) {
-                    $query .= "'" . $this->connection->real_escape_string($cell) . "')";
+                $query .= '(NULL,';
+                foreach($this->data[$i] as $key => $cell) {
+                    $query .= "'" . $this->connection->real_escape_string($cell) . "'";
+                    if($key < (count($this->data[$i])- 1)) $query .= ',';
                 }
-                if($i < count($this->columns) - 1) $query .= ',';
+                $query .= $i == (count($this->data) - 1) ? ')' : '),';
             }
         }
         return $this->connection->query($query) === true
