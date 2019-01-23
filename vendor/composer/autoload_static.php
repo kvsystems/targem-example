@@ -9,11 +9,21 @@ class ComposerStaticInit3e5b6f7c3390ca081a75db1a94828e21
     public static $prefixLengthsPsr4 = array (
         'T' => 
         array (
+            'Targem\\Parser\\Database\\' => 23,
+            'Targem\\Parser\\Column\\' => 21,
             'Targem\\Parser\\' => 14,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Targem\\Parser\\Database\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/database',
+        ),
+        'Targem\\Parser\\Column\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/column',
+        ),
         'Targem\\Parser\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',

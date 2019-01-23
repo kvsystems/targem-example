@@ -6,5 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Targem\\Parser\\Database\\' => array($baseDir . '/src/database'),
+    'Targem\\Parser\\Column\\' => array($baseDir . '/src/column'),
     'Targem\\Parser\\' => array($baseDir . '/src'),
 );
