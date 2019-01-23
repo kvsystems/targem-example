@@ -22,7 +22,7 @@ class MysqlDatabase extends ADatabase {
      * @param string $db
      */
     public function __construct(string $host, string $user, string $pwd, string $db)   {
-        /**try{
+        try{
             if( $this->connection = mysqli_connect($host, $user, $pwd) ) {
                 mysqli_select_db($this->connection, $db);
                 $this->connection->query("SET lc_time_names = 'ru_RU'");
@@ -30,7 +30,7 @@ class MysqlDatabase extends ADatabase {
             } else throw new \Exception('Could not connect');
         } catch (\Exception $e) {
             echo $e->getMessage() . PHP_EOL;
-        }*/
+        }
     }
 
     /**
