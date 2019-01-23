@@ -1,5 +1,5 @@
 <?php
-namespace Targem\Parser;
+namespace Targem\Parser\Column;
 
 /**
  * Class ColumnFactory.
