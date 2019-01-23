@@ -38,11 +38,9 @@ abstract class ADatabase {
     /**
      * Sets a new column.
      * @param IColumn $column
-     * @return bool
      */
-    public function column(IColumn $column) : bool {
-
-        return true;
+    public function column(IColumn $column) {
+        $this->columns[] = $column;
     }
 
     /**
