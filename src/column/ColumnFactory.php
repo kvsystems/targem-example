@@ -43,13 +43,13 @@ class ColumnFactory {
                 $column = new LoginColumn();
                 break;
             case self::EMAIL:
-                $column = new LoginColumn();
+                $column = new EmailColumn();
                 break;
             case self::TIMESTAMP:
-                $column = new LoginColumn();
+                $column = new TimestampColumn();
                 break;
             case self::STATUS:
-                $column = new LoginColumn();
+                $column = new StatusColumn();
                 break;
             default:
                 $column = new DefaultColumn();
