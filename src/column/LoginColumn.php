@@ -3,6 +3,8 @@ namespace Targem\Parser;
 
 class LoginColumn implements IColumn {
 
+    const TYPE = 'varchar(255) NOT NULL';
+
     public function define()    {
         // TODO: Implement define() method.
     }

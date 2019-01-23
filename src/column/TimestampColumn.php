@@ -3,6 +3,8 @@ namespace Targem\Parser;
 
 class TimestampColumn implements IColumn {
 
+    const TYPE = 'int(11) NOT NULL';
+
     public function define()    {
         // TODO: Implement define() method.
     }

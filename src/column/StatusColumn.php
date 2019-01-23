@@ -3,6 +3,8 @@ namespace Targem\Parser;
 
 class StatusColumn implements IColumn {
 
+    const TYPE = 'int(1) NOT NULL';
+
     public function define()    {
         // TODO: Implement define() method.
     }
