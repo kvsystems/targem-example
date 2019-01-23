@@ -1,7 +1,7 @@
 <?php
 namespace Targem\Parser\Database;
 
-use Targem\Parser\IColumn;
+use Targem\Parser\Column\IColumn;
 
 /**
  * Abstract class ADatabase.
