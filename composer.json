@@ -9,9 +9,15 @@
       "email": "ak777-07@mail.ru"
     }
   ],
+  "require": {
+    "php": ">=7.0",
+    "ext-mysqli": "*"
+  },
   "autoload": {
     "psr-4": {
-      "Targem\\Parser\\": "src/"
+      "Targem\\Parser\\": "src/",
+      "Targem\\Parser\\Database\\": "src/database",
+      "Targem\\Parser\\Column\\": "src/column"
     }
   }
 }
