@@ -31,7 +31,6 @@ class ColumnFactory {
      * @const string
      */
     const STATUS    = 'Статус';
-
     /**
      * Creates a database column type object.
      * @param string $header
