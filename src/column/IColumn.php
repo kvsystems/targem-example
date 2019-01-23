@@ -8,6 +8,11 @@ namespace Targem\Parser\Column;
  */
 interface IColumn {
 
-    public function transform();
+    /**
+     * Transform value too column format.
+     * @param string $value
+     * @return string
+     */
+    public function transform(string $value) : string;
 
 }
