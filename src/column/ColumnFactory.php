@@ -52,7 +52,7 @@ class ColumnFactory {
                 $column = new StatusColumn();
                 break;
             default:
-                $column = new DefaultColumn();
+                $column = new NoColumn();
         }
         return $column;
     }

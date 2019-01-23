@@ -8,9 +8,6 @@ namespace Targem\Parser\Column;
  */
 interface IColumn {
 
-    public function define();
-    public function process();
-    public function export();
     public function transform();
 
 }
