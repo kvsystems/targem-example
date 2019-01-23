@@ -56,7 +56,7 @@ class CsvParser {
      * Returns csv headers.
      * @return array
      */
-    public function headers()   {
+    public function headers() : array {
         return $this->_headers;
     }
 
@@ -64,7 +64,7 @@ class CsvParser {
      * Returns csv data.
      * @return array
      */
-    public function content()  {
+    public function content() : array {
         return $this->_content;
     }
 
